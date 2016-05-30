@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plano_fundo"
+    android:focusableInTouchMode="false"
+    android:importantForAccessibility="yes"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:touchscreenBlocksFocus="false"
+    tools:context="fatec.br_bus.Controller.CadastroHorarioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout"
+        android:background="@drawable/plano_fundo">
+
+        <Button
+            android:id="@+id/btn_horario_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definir horário de ínicio"
+            android:background="@drawable/layout_botao" />
+
+        <TextView
+            android:id="@+id/timeDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_horario_inicio"
+            android:layout_gravity="center_horizontal"
+            android:text="Hora início"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_horario_fim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definir horário de fim"
+            android:background="@drawable/layout_botao" />
+
+        <TextView
+            android:id="@+id/timeDisplay_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_horario_inicio"
+            android:layout_gravity="center_horizontal"
+            android:text="Hora fim"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:background="@drawable/plano_botao"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_seg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="S"
+                android:onClick="ClickChkSeg" />
+
+            <CheckBox
+                android:id="@+id/chk_ter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="T"
+                android:onClick="ClickChkTer" />
+
+            <CheckBox
+                android:id="@+id/chk_qua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Q"
+                android:onClick="ClickChkQua" />
+
+            <CheckBox
+                android:id="@+id/chk_qui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Q"
+                android:onClick="ClickChkQui" />
+
+            <CheckBox
+                android:id="@+id/chk_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="S"
+                android:onClick="ClickChkSex" />
+
+            <CheckBox
+                android:id="@+id/chk_sab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="S"
+                android:onClick="ClickChkSab" />
+
+            <CheckBox
+                android:id="@+id/chk_dom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="D"
+                android:onClick="ClickChkDom" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:onClick="ClickbtnSalvar"
+        android:text="Salvar"
+        android:background="@drawable/layout_botao"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:nestedScrollingEnabled="false"
+        android:enabled="true" />
+
+</RelativeLayout>
+
+

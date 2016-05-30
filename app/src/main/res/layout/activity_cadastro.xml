@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="fatec.br_bus.Controller.CadastroActivity"
+    android:background="@drawable/plano_fundo">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_linha"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btn_pesquisar"
+        android:selectAllOnFocus="false"
+        android:textColor="#ffffff"
+        android:inputType="text"
+        android:hint="Código da Linha"
+        android:onClick="ClickTextViewPesq" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar"
+        android:id="@+id/btn_pesquisar"
+        android:layout_alignTop="@+id/input_linha"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/layout_botao"
+        android:textColor="#fcffffff"
+        android:nestedScrollingEnabled="true"
+        android:onClick="ClickbtPesquisar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurações de Horário"
+        android:id="@+id/btn_configuracaoHorario"
+        android:onClick="ClickbtnConfiguracaoHorario"
+        android:background="@drawable/layout_botao"
+        android:textColor="#ffffff"
+        android:enabled="false"
+        android:focusable="false"
+        android:layout_below="@+id/checkBoxTerm"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btn_pesquisar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ponto de Onibus"
+        android:id="@+id/btn_pontoOnibus"
+        android:onClick="ClickbtnConfiguracaoPonto"
+        android:background="@drawable/layout_botao"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/btn_configuracaoHorario"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false"
+        android:focusable="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:id="@+id/btn_salvarCadastro"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/layout_botao"
+        android:textColor="#ffffff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false"
+        android:onClick="ClickbtnSalvar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lb_LinhaPesq"
+        android:selectAllOnFocus="false"
+        android:textColor="#ffffff"
+        android:enabled="false"
+        android:focusable="false"
+        android:layout_below="@+id/btn_pesquisar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bairro"
+        android:id="@+id/checkBoxBairro"
+        android:background="@drawable/layout_botao"
+        android:layout_below="@+id/lb_LinhaPesq"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/checkBoxTerm"
+        android:focusable="false"
+        android:enabled="false"
+        android:onClick="ClickbtCkeqBairro" />
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminal"
+        android:id="@+id/checkBoxTerm"
+        android:background="@drawable/layout_botao"
+        android:enabled="false"
+        android:layout_below="@+id/checkBoxBairro"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:onClick="ClickbtCkeqTerm" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/plano_botao"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/btn_salvarCadastro"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2"
+        android:visibility="visible">
+
+        <CheckBox
+            android:id="@+id/chekSeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="S"
+            android:onClick="ClickChkSeg"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/chekter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="T"
+            android:onClick="ClickChkTer"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/chekqua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Q"
+            android:onClick="ClickChkQua"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/chekqui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Q"
+            android:onClick="ClickChkQui"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/cheksex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="S"
+            android:onClick="ClickChkSex"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/cheksab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="S"
+            android:onClick="ClickChkSab"
+            android:enabled="false"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/chekdom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="D"
+            android:onClick="ClickChkDom"
+            android:enabled="false"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textHoraIni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Hora ini"
+        android:textSize="30sp"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/textHoraFim"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textHoraFim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Hora fim"
+        android:textSize="30sp"
+        android:visibility="visible"
+        android:layout_above="@+id/lbmSemana"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora Início: "
+        android:id="@+id/lbmHoraini"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/lbmHorafim"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora Fim: "
+        android:id="@+id/lbmHorafim"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/textHoraIni"
+        android:layout_alignEnd="@+id/btn_pesquisar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agenda da Semana"
+        android:id="@+id/lbmSemana"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ponto:"
+        android:id="@+id/lbmPonto"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/lbmHoraini"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_pontoOnibus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbmDescPonto"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/lbmHoraini"
+        android:layout_alignTop="@+id/lbmPonto"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/lbmPonto" />
+
+</RelativeLayout>

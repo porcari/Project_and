@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fatec.br_bus" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/bus"
+        android:label="@string/app_name">
+        <activity
+            android:name=".Controller.ConsultarLinhasCadastradasActivity"
+            android:label="@string/app_name"
+            android:logo="@mipmap/bus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.CadastroActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.CadastroHorarioActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.CadastroPontoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.DetalhesActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>
